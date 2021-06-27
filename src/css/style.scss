@@ -1,0 +1,16 @@
+@import './_variables';
+@import './_mixin';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+@import './_section';
+@import './_landing';
+@import './_button';
