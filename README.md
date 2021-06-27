@@ -3,8 +3,13 @@
 A React project created to contain several simple games that can be played with seniors.
 
 ## Games
+
 ### Mystery Word Game
 
+Generates a random word from a random category.
+Category is given to encourage players to think about words that fit the category.
+Players are given 10 incorrect guesses to figure out the word.
+Game ends once the word is guessed correctly or there are 0 guesses left.
 
 ## Available Scripts
 
