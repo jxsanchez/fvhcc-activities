@@ -1,18 +1,40 @@
 import React from 'react';
+import anime from 'animejs/lib/anime.es';
 import { Link } from 'react-router-dom';
 
+import Button from './Button';
 import LetterArea from './LetterArea';
 import ResultsArea from './ResultsArea';
 
-const words = {
-    category: 'FLOWERS',
-    list: ['TULIP', 'VIOLET', 'ROSE', 'DANDELION', 'HYDRANGEA', 'HONEYSUCKLE', 'LILAC']
-};
+const words = [
+    { 
+        category: 'FLOWERS',
+        list: ['TULIP', 'VIOLET', 'ROSE', 'DANDELION', 'HYDRANGEA', 
+            'HONEYSUCKLE', 'LILAC', 'DAISY', 'BLUEBELL', 'IRIS', 'AMARYLLIS', 'ASTER', 'BELLFLOWER',
+            'BUTTERCUP', 'CARNATION', 'LILY', 'CHRYSANTHEMUM', 'CLOVER', 'COSMOS', 'GARDENIA',
+            'GERMANIUM', 'GOLDENROD']
+    },
+    {
+        category: 'ANIMALS',
+        list: [
+            'CAT', 'DOG', 'PARROT'
+        ]
+    },
+    {
+        category: 'FRUIT',
+        list: [
+            'APPLE', 'BANANA', 'ORANGE', 'KIWI', 'BLUEBERRY'
+        ]
+    }
+];
 
 const hiddenCharacter = '_';
 const totalGuesses = 10;
 
-const word = words.list[Math.floor(Math.random() * words.list.length)];
+// const word = words.list[Math.floor(Math.random() * words.list.length)];
+const randWordObjIndex = Math.floor(Math.random() * words.length);
+const category = words[randWordObjIndex].category;
+const word = words[randWordObjIndex].list[Math.floor(Math.random() * words[randWordObjIndex].list.length)];
 
 class MysteryWord extends React.Component {
     state = { 
@@ -20,6 +42,25 @@ class MysteryWord extends React.Component {
         displayWord: Array.from({length: word.length}, (v, i) => hiddenCharacter), 
         guessesLeft: totalGuesses
     };
+
+    componentDidMount() {
+        document.title = 'Mystery Word Game | FVHCC Activities';
+
+        anime({
+            targets: '.game-info-container',
+            translateY: ['-100%', 0],
+            duration: 1000,
+            easing: 'easeInOutSine'
+        });
+
+        anime({
+            targets: '.letter',
+            translateY: [50, 0],
+            // opacity: [0, 1],
+            delay: (el, i) => { return i * 50 },
+            easing: 'easeInOutSine'
+        });
+    }
 
     // Function sent to child, LetterArea, to get letter clicked
     handleLetterClicked = (letter) => {
@@ -49,12 +90,17 @@ class MysteryWord extends React.Component {
         this.setState({displayWord: temp}); // Update state to add all occurances found letter
     }
 
+    giveUp = () => {
+        console.log('hi');
+        this.setState({ guessesLeft: 0 });
+    }
+
     render() {
         return (
             <div id='mysteryword' className='section'>
                 <div className='game-info-container'>
                     <h1 className='game-title'>Mystery Word</h1>
-                    <h2 className='category'>Category: {words.category}</h2>
+                    <h2 className='category'>Category: <span className='category-name'>{category}</span></h2>
                     <p className='guesses-left'>
                         Guesses Left:
                         <span 
@@ -71,15 +117,18 @@ class MysteryWord extends React.Component {
                 </div>
                 {this.state.guessesLeft > 0 && this.state.displayWord.indexOf(hiddenCharacter) !== -1 ? 
                             <LetterArea handleLetterClicked={this.handleLetterClicked}>
-                                <Link className='button' to='/'>
-                                    Quit
-                                </Link>
+                                <div className='options'>
+                                    <Button className='button button-outline-blue' text='Give Up' onClick={this.giveUp} />
+                                    <Link className='button' to='/'>
+                                        Exit
+                                    </Link>
+                                </div>
                             </LetterArea> 
                             : ''}
                 
                 {this.state.guessesLeft === 0 ? 
                 <ResultsArea 
-                    title='Game Over!'
+                    title='Game Over.'
                     message={`The word is ${word}`}
                     result='error'
                 />
@@ -87,8 +136,8 @@ class MysteryWord extends React.Component {
                 
                 {this.state.displayWord.indexOf(hiddenCharacter) === -1 ? 
                 <ResultsArea 
-                    title='Good job, you are correct!'
-                    message='Guess another word!'
+                    title='Good job!!!'
+                    message='Play again to guess another word!'
                     result='success'
                 /> 
                 : ''}

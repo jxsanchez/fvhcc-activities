@@ -1,9 +1,13 @@
 import React from 'react';
+import SmoothScroll from 'smooth-scroll';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import Index from './Index';
 import MysteryWord from './MysteryWord';
 import '../css/style.css';
+
+
+const scroll = new SmoothScroll('a[href*="#"]');
 
 const App = () => {
     return (

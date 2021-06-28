@@ -1,0 +1,13 @@
+.game-info {
+  .game-title {
+    @include uppercaseTitle(3px);
+    color: $primaryBlue;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+
+  .game-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+}

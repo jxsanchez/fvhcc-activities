@@ -39,7 +39,14 @@ class Index extends React.Component {
                             title='Mystery Word Game'
                             description='Guess the mystery word before you run out of guesses!'
                         >
-                            <Link to='/mysteryword' className='button'>Play</Link>
+                            <Link to='/mysteryword' className='button button-outline-red'>Play</Link>
+                        </GameInfo>
+
+                        <GameInfo 
+                            title='Jeopardy!'
+                            description='Test you trivia knowledge by answering questions from different categories!'
+                        >
+                            <Link to='/' className='button button-outline-red disabled'>Coming Soon</Link>
                         </GameInfo>
                     </Section>
                 </div>

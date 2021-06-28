@@ -14,7 +14,7 @@ const ResultsArea = (props) => {
             <p className='results-message'>{props.message}</p>
 
             <div className='options'>
-                <Button href='/mysteryword' text='Play Again' onClick={playAgain} />
+                <Button href='/mysteryword' className='button button-outline-blue' text='Play Again' onClick={playAgain} />
                 <Link className='button' to='/'>Quit</Link>
             </div>
         </div>

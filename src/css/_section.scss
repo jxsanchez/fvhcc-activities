@@ -4,8 +4,8 @@
 
   .section-title {
     color: $primaryBlue;
-    font-size: 4rem;
-    letter-spacing: 10px;
+    font-size: 3.2rem;
+    @include uppercaseTitle(5px);
     text-transform: uppercase;
   }
 

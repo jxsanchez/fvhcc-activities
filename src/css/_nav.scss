@@ -18,12 +18,11 @@
     margin-left: 50px;
 
     .nav-link {
+      @include uppercaseTitle(5px);
       color: $primaryBlue;
       font-size: 1.5rem;
       font-weight: bold;
-      letter-spacing: 5px;
       margin-right: 50px;
-      text-transform: uppercase;
       transition: $transition;
 
       &:hover {

@@ -4,3 +4,8 @@
   flex-direction: $direction;
   justify-content: center;
 }
+
+@mixin uppercaseTitle($letterSpacing) {
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing;
+}

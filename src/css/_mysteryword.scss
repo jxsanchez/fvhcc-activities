@@ -1,23 +1,40 @@
 #mysteryword {
   height: 100vh;
+  padding: 0;
 
   .game-info-container {
     @include flexCenter(column);
+    background: $primaryRed;
+    border-bottom: solid 7px $primaryBlue;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    color: $white;
     height: 30%;
+    width: 100%;
 
     .game-title {
+      @include uppercaseTitle(10px);
       font-size: 4.3rem;
     }
 
     .category {
       font-size: 2rem;
+      font-weight: normal;
       margin: 10px 0;
+
+      .category-name {
+        @include uppercaseTitle(1px);
+        color: $white;
+        font-weight: bold;
+        text-decoration: underline;
+      }
     }
 
     .guesses-left {
       font-size: 1.7rem;
 
       .guess-num {
+        font-size: 2.2rem;
         margin-left: 10px;
       }
     }
@@ -25,7 +42,7 @@
 
   .mystery-word-container {
     @include flexCenter(row);
-    height: 25%;
+    height: 27%;
 
     .letter {
       font-size: 4rem;
@@ -36,34 +53,36 @@
   .results-area {
     @include flexCenter(column);
     flex-wrap: wrap;
-    height: 45%;
+    height: 43%;
 
     .results-title {
+      @include uppercaseTitle(5px);
       font-size: 2.5rem;
     }
 
     .results-message {
       font-size: 1.7rem;
-      margin: 15px 0;
+      margin: 25px 0;
     }
   }
 
   .letter-area {
     @include flexCenter(column);
-    height: 45%;
-    padding: 0 100px;
+    height: 43%;
+    padding: 0 7%;
     text-align: center;
+    width: fit-content;
 
     .letters-container {
       margin-bottom: 15px;
 
       .letter-btn {
-        //   border: none;
         border: none;
-        font-size: xx-large;
-        margin: 0 10px;
+        font-size: 3rem;
+        margin: 0;
 
         &:hover {
+          color: $primaryRed;
           cursor: pointer;
         }
       }
@@ -73,5 +92,13 @@
   .letter-btn {
     background: none;
     color: black;
+  }
+
+  .options {
+    @include flexCenter(row);
+
+    .button {
+      margin: 0 15px;
+    }
   }
 }

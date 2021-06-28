@@ -1,43 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: #525458;
-  font-family: "Raleway", sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-.success {
-  color: darkgreen;
-}
-
-.warning {
-  color: goldenrod;
-}
-
-.error {
-  color: #e8041f;
-}
-
-.divider {
-  margin: 25px 0;
-  width: 100%;
-}
-
 .button {
   background: #e8041f;
   border-radius: 5px;
   color: #f8f8ff;
   display: inline-block;
+  font-weight: bold;
   letter-spacing: 3px;
   padding: 15px 25px;
   text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.button:hover {
+  background: #00255c;
+  cursor: pointer;
+}
+
+.button-outline-red {
+  background: none;
+  border: 3px solid #e8041f;
+  color: #e8041f;
+  font-weight: bold;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.button-outline-red:hover {
+  background: #e8041f;
+  border: 3px solid #e8041f;
+  color: #f8f8ff;
+}
+
+.button-outline-blue {
+  background: none;
+  border: 3px solid #00255c;
+  color: #00255c;
+  font-weight: bold;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.button-outline-blue:hover {
+  background: #00255c;
+  border: 3px solid #00255c;
+  color: #f8f8ff;
 }
 
 .nav {
@@ -78,12 +86,12 @@ a {
 }
 
 .nav .link-container .nav-link {
+  text-transform: uppercase;
+  letter-spacing: 5px;
   color: #00255c;
   font-size: 1.5rem;
   font-weight: bold;
-  letter-spacing: 5px;
   margin-right: 50px;
-  text-transform: uppercase;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
@@ -99,8 +107,9 @@ a {
 
 .section .section-title {
   color: #00255c;
-  font-size: 4rem;
-  letter-spacing: 10px;
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
   text-transform: uppercase;
 }
 
@@ -125,32 +134,45 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   height: 80vh;
-  background: url("../assets/img/landing-img.jpeg");
+  background: url("../assets/img/landing-bg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.4);
-          box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.6);
+          box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.6);
 }
 
 #landing .section-title {
   font-size: 4.5rem;
-  text-shadow: 0 0 2px #000;
+  letter-spacing: 10px;
   text-align: center;
 }
 
 #landing .section-subtitle {
-  color: #f8f8ff;
-  text-shadow: 0 0 2px #000;
+  color: #e8041f;
   font-size: 2.5rem;
 }
 
 #landing .button {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-top: 15px;
+}
+
+.game-info .game-title {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #00255c;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.game-info .game-description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
 #mysteryword {
   height: 100vh;
+  padding: 0;
 }
 
 #mysteryword .game-info-container {
@@ -167,16 +189,33 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: #e8041f;
+  border-bottom: solid 7px #00255c;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  color: #f8f8ff;
   height: 30%;
+  width: 100%;
 }
 
 #mysteryword .game-info-container .game-title {
+  text-transform: uppercase;
+  letter-spacing: 10px;
   font-size: 4.3rem;
 }
 
 #mysteryword .game-info-container .category {
   font-size: 2rem;
+  font-weight: normal;
   margin: 10px 0;
+}
+
+#mysteryword .game-info-container .category .category-name {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #f8f8ff;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 #mysteryword .game-info-container .guesses-left {
@@ -184,6 +223,7 @@ a {
 }
 
 #mysteryword .game-info-container .guesses-left .guess-num {
+  font-size: 2.2rem;
   margin-left: 10px;
 }
 
@@ -201,7 +241,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 25%;
+  height: 27%;
 }
 
 #mysteryword .mystery-word-container .letter {
@@ -225,16 +265,18 @@ a {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 45%;
+  height: 43%;
 }
 
 #mysteryword .results-area .results-title {
+  text-transform: uppercase;
+  letter-spacing: 5px;
   font-size: 2.5rem;
 }
 
 #mysteryword .results-area .results-message {
   font-size: 1.7rem;
-  margin: 15px 0;
+  margin: 25px 0;
 }
 
 #mysteryword .letter-area {
@@ -251,9 +293,12 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 45%;
-  padding: 0 100px;
+  height: 43%;
+  padding: 0 7%;
   text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 #mysteryword .letter-area .letters-container {
@@ -262,16 +307,79 @@ a {
 
 #mysteryword .letter-area .letters-container .letter-btn {
   border: none;
-  font-size: xx-large;
-  margin: 0 10px;
+  font-size: 3rem;
+  margin: 0;
 }
 
 #mysteryword .letter-area .letters-container .letter-btn:hover {
+  color: #e8041f;
   cursor: pointer;
 }
 
 #mysteryword .letter-btn {
   background: none;
   color: black;
+}
+
+#mysteryword .options {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#mysteryword .options .button {
+  margin: 0 15px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.success {
+  color: darkgreen;
+}
+
+.warning {
+  color: #e9c979;
+}
+
+.error {
+  color: #5d020c;
+}
+
+.divider {
+  margin: 25px 0;
+  width: 100%;
+}
+
+.disabled {
+  background: #525458;
+  color: #f8f8ff;
+  border: 3px solid #525458;
+}
+
+.disabled:hover {
+  cursor: default;
+  background: #525458;
+  color: #f8f8ff;
+  border: 3px solid #525458;
 }
 /*# sourceMappingURL=style.css.map */

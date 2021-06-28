@@ -3,7 +3,42 @@
   border-radius: 5px;
   color: $white;
   display: inline-block;
+  font-weight: bold;
   letter-spacing: 3px;
   padding: 15px 25px;
   text-transform: uppercase;
+  transition: $transition;
+
+  &:hover {
+    background: $primaryBlue;
+    cursor: pointer;
+  }
+}
+
+.button-outline-red {
+  background: none;
+  border: 3px solid $primaryRed;
+  color: $primaryRed;
+  font-weight: bold;
+  transition: $transition;
+
+  &:hover {
+    background: $primaryRed;
+    border: 3px solid $primaryRed;
+    color: $white;
+  }
+}
+
+.button-outline-blue {
+  background: none;
+  border: 3px solid $primaryBlue;
+  color: $primaryBlue;
+  font-weight: bold;
+  transition: $transition;
+
+  &:hover {
+    background: $primaryBlue;
+    border: 3px solid $primaryBlue;
+    color: $white;
+  }
 }

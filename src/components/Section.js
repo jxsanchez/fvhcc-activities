@@ -8,8 +8,6 @@ class Section extends React.Component {
                 <h2 className='section-subtitle'>{this.props.subtitle ? this.props.subtitle : ''}</h2>
 
                 {this.props.children}
-
-                <hr className='divider' />
             </div>
         );
     }
