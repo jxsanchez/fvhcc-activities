@@ -1,3 +1,17 @@
 .section {
-    min-height: 100vh;
+  height: 100vh;
+  padding: 50px 100px;
+
+  .section-title {
+    color: $primaryBlue;
+    font-size: 4rem;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+  }
+
+  .section-subtitle {
+    color: $gray;
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
 }

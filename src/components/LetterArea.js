@@ -16,10 +16,15 @@ const LetterArea = (props) => {
     }
 
     return (
-        <div>
-            {letters.map(letter => {
-                return <button className="button" key={letter} onClick={event => { onLetterClicked(event)}}>{letter}</button>
-            })}
+        <div className='letter-area'>
+            <div className='letters-container'>
+                {letters.map(letter => {
+                    return <button className="button letter-btn" key={letter} onClick={event => { onLetterClicked(event)}}>{letter}</button>
+                })}
+            </div>
+            
+
+            {props.children}
         </div>
     )
 }

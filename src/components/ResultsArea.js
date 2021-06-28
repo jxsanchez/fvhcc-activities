@@ -1,16 +1,22 @@
 import React from 'react';
-import Button from './Button';
 import { Link } from 'react-router-dom';
+import Button from './Button';
 
 const ResultsArea = (props) => {
+    const playAgain = () => {
+        props.playAgain();
+    }
+
     return (
-        <div>
-            <h3>{props.message}</h3>
+        <div className='results-area'>
+            <h3 className={`results-title ${props.result}`}>{props.title}</h3>
 
-            {props.solution ? <p>{props.solution}</p> : ''}
+            <p className='results-message'>{props.message}</p>
 
-            <Button href='/mysteryword' text='Play Again' />
-            <Link className='button' to='/'>Quit</Link>
+            <div className='options'>
+                <Button href='/mysteryword' text='Play Again' onClick={playAgain} />
+                <Link className='button' to='/'>Quit</Link>
+            </div>
         </div>
     );
 }

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import LetterArea from './LetterArea';
 import ResultsArea from './ResultsArea';
 
@@ -7,12 +9,16 @@ const words = {
     list: ['TULIP', 'VIOLET', 'ROSE', 'DANDELION', 'HYDRANGEA', 'HONEYSUCKLE', 'LILAC']
 };
 
+const hiddenCharacter = '_';
+const totalGuesses = 10;
+
 const word = words.list[Math.floor(Math.random() * words.list.length)];
 
 class MysteryWord extends React.Component {
     state = { 
-        displayWord: Array.from({length: word.length}, (v, i) => '*'), 
-        guessesLeft: 10
+        word: word,
+        displayWord: Array.from({length: word.length}, (v, i) => hiddenCharacter), 
+        guessesLeft: totalGuesses
     };
 
     // Function sent to child, LetterArea, to get letter clicked
@@ -27,12 +33,12 @@ class MysteryWord extends React.Component {
 
     // Find all occurances of the specified letter and replace them in a temp array that will update state of displayWord
     findAllOccurences = (letter) => {
-        let temp = [...this.state.displayWord]; // Array that will replace all instances of * with letter
+        let temp = [...this.state.displayWord]; // Array that will replace all instances of hiddenCharacter with letter
 
         let index = 0; // Index where search will begin
         let foundIndex = word.indexOf(letter, index); // Result of indexOf()
 
-        // Replace all instances of * with current letter in temp array
+        // Replace all instances of hiddenCharacter with current letter in temp array
         while(foundIndex !== -1) {
             temp[foundIndex] = letter; 
 
@@ -45,20 +51,47 @@ class MysteryWord extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Mystery Word</h1>
-                <h2>Category: {words.category}</h2>
-                <div>
-                    Guesses Left: { this.state.guessesLeft }
-                    <br />
-                    {this.state.displayWord}
+            <div id='mysteryword' className='section'>
+                <div className='game-info-container'>
+                    <h1 className='game-title'>Mystery Word</h1>
+                    <h2 className='category'>Category: {words.category}</h2>
+                    <p className='guesses-left'>
+                        Guesses Left:
+                        <span 
+                            className={`guess-num ${this.state.guessesLeft <= 3 ? 'warning' : ''}
+                                        ${this.state.guessesLeft === 0 ? 'error' : ''}`}>
+                            { this.state.guessesLeft }
+                        </span>
+                    </p>
                 </div>
-                {this.state.guessesLeft > 0 && this.state.displayWord.indexOf('*') !== -1 ? <LetterArea handleLetterClicked={this.handleLetterClicked} /> : ''}
+                <div className='mystery-word-container'>
+                    {this.state.displayWord.map((letter, index) => {
+                       return <div key={index} className='letter'>{letter}</div>;
+                    })}
+                </div>
+                {this.state.guessesLeft > 0 && this.state.displayWord.indexOf(hiddenCharacter) !== -1 ? 
+                            <LetterArea handleLetterClicked={this.handleLetterClicked}>
+                                <Link className='button' to='/'>
+                                    Quit
+                                </Link>
+                            </LetterArea> 
+                            : ''}
                 
-                {this.state.guessesLeft === 0 ? <ResultsArea message='Out of Guesses!' solution={`The word was ${word}`} />
-                                              : ''}
+                {this.state.guessesLeft === 0 ? 
+                <ResultsArea 
+                    title='Game Over!'
+                    message={`The word is ${word}`}
+                    result='error'
+                />
+                : ''}
                 
-                {this.state.displayWord.indexOf('*') === -1 ? <ResultsArea message='Congratulations, you got it!' /> : ''}
+                {this.state.displayWord.indexOf(hiddenCharacter) === -1 ? 
+                <ResultsArea 
+                    title='Good job, you are correct!'
+                    message='Guess another word!'
+                    result='success'
+                /> 
+                : ''}
             </div>
         );
     }

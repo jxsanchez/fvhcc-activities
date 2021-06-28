@@ -1,0 +1,77 @@
+#mysteryword {
+  height: 100vh;
+
+  .game-info-container {
+    @include flexCenter(column);
+    height: 30%;
+
+    .game-title {
+      font-size: 4.3rem;
+    }
+
+    .category {
+      font-size: 2rem;
+      margin: 10px 0;
+    }
+
+    .guesses-left {
+      font-size: 1.7rem;
+
+      .guess-num {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .mystery-word-container {
+    @include flexCenter(row);
+    height: 25%;
+
+    .letter {
+      font-size: 4rem;
+      margin: 0 25px;
+    }
+  }
+
+  .results-area {
+    @include flexCenter(column);
+    flex-wrap: wrap;
+    height: 45%;
+
+    .results-title {
+      font-size: 2.5rem;
+    }
+
+    .results-message {
+      font-size: 1.7rem;
+      margin: 15px 0;
+    }
+  }
+
+  .letter-area {
+    @include flexCenter(column);
+    height: 45%;
+    padding: 0 100px;
+    text-align: center;
+
+    .letters-container {
+      margin-bottom: 15px;
+
+      .letter-btn {
+        //   border: none;
+        border: none;
+        font-size: xx-large;
+        margin: 0 10px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .letter-btn {
+    background: none;
+    color: black;
+  }
+}

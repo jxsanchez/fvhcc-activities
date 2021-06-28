@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Nav from './Nav';
 import Section from './Section';
 import GameInfo from './GameInfo';
 import Button from './Button';
@@ -19,9 +20,10 @@ class Index extends React.Component {
     render() {
         return (
             <div>
+                <Nav />
                 <Section 
                         id='landing' 
-                        title='Freedom Village Health Care Center Activities'
+                        title='FVHCC Activities'
                         subtitle='Games to stimulate the mind'
                     >
                         <Button href='#games' className='button' text='See Games' />
@@ -32,6 +34,7 @@ class Index extends React.Component {
                         title='Games'
                         subtitle='Browse our collection of games.'
                     >
+                        <hr className='divider' />
                         <GameInfo 
                             title='Mystery Word Game'
                             description='Guess the mystery word before you run out of guesses!'

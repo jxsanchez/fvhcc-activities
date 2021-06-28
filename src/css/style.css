@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #525458;
+  font-family: "Raleway", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -9,8 +13,101 @@ a {
   text-decoration: none;
 }
 
+.success {
+  color: darkgreen;
+}
+
+.warning {
+  color: goldenrod;
+}
+
+.error {
+  color: #e8041f;
+}
+
+.divider {
+  margin: 25px 0;
+  width: 100%;
+}
+
+.button {
+  background: #e8041f;
+  border-radius: 5px;
+  color: #f8f8ff;
+  display: inline-block;
+  letter-spacing: 3px;
+  padding: 15px 25px;
+  text-transform: uppercase;
+}
+
+.nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20vh;
+  padding: 0 50px;
+}
+
+.nav .nav-brand {
+  height: 70%;
+}
+
+.nav .nav-brand .brand-img {
+  height: 100%;
+}
+
+.nav .link-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  margin-left: 50px;
+}
+
+.nav .link-container .nav-link {
+  color: #00255c;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-right: 50px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.nav .link-container .nav-link:hover {
+  color: #e8041f;
+}
+
 .section {
-  min-height: 100vh;
+  height: 100vh;
+  padding: 50px 100px;
+}
+
+.section .section-title {
+  color: #00255c;
+  font-size: 4rem;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+.section .section-subtitle {
+  color: #525458;
+  font-size: 2rem;
+  letter-spacing: 5px;
 }
 
 #landing {
@@ -27,13 +124,154 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 80vh;
+  background: url("../assets/img/landing-img.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.4);
+          box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.4);
 }
 
-.button {
-  background: red;
-  border-radius: 5px;
-  display: inline-block;
+#landing .section-title {
+  font-size: 4.5rem;
+  text-shadow: 0 0 2px #000;
+  text-align: center;
+}
+
+#landing .section-subtitle {
   color: #f8f8ff;
-  padding: 15px 25px;
+  text-shadow: 0 0 2px #000;
+  font-size: 2.5rem;
+}
+
+#landing .button {
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+#mysteryword {
+  height: 100vh;
+}
+
+#mysteryword .game-info-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 30%;
+}
+
+#mysteryword .game-info-container .game-title {
+  font-size: 4.3rem;
+}
+
+#mysteryword .game-info-container .category {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+#mysteryword .game-info-container .guesses-left {
+  font-size: 1.7rem;
+}
+
+#mysteryword .game-info-container .guesses-left .guess-num {
+  margin-left: 10px;
+}
+
+#mysteryword .mystery-word-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 25%;
+}
+
+#mysteryword .mystery-word-container .letter {
+  font-size: 4rem;
+  margin: 0 25px;
+}
+
+#mysteryword .results-area {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 45%;
+}
+
+#mysteryword .results-area .results-title {
+  font-size: 2.5rem;
+}
+
+#mysteryword .results-area .results-message {
+  font-size: 1.7rem;
+  margin: 15px 0;
+}
+
+#mysteryword .letter-area {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45%;
+  padding: 0 100px;
+  text-align: center;
+}
+
+#mysteryword .letter-area .letters-container {
+  margin-bottom: 15px;
+}
+
+#mysteryword .letter-area .letters-container .letter-btn {
+  border: none;
+  font-size: xx-large;
+  margin: 0 10px;
+}
+
+#mysteryword .letter-area .letters-container .letter-btn:hover {
+  cursor: pointer;
+}
+
+#mysteryword .letter-btn {
+  background: none;
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */

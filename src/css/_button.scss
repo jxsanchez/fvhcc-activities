@@ -1,7 +1,9 @@
 .button {
-  background: $primaryColor;
+  background: $primaryRed;
   border-radius: 5px;
-  display: inline-block;
   color: $white;
+  display: inline-block;
+  letter-spacing: 3px;
   padding: 15px 25px;
+  text-transform: uppercase;
 }

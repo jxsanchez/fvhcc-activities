@@ -1,16 +1,40 @@
-@import './_variables';
-@import './_mixin';
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+
+@import "./_variables";
+@import "./_mixin";
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  color: $gray;
+  font-family: $font;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-@import './_section';
-@import './_landing';
-@import './_button';
+.success {
+  color: darkgreen;
+}
+
+.warning {
+  color: goldenrod;
+}
+
+.error {
+  color: $primaryRed;
+}
+
+.divider {
+  margin: 25px 0;
+  width: 100%;
+}
+
+@import "./_button";
+@import "./_nav";
+@import "./_section";
+@import "./_landing";
+@import "./_mysteryword";
