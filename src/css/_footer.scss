@@ -1,0 +1,6 @@
+.footer {
+  @include flexCenter(column);
+  background: $primaryBlue;
+  color: $white;
+  height: 10vh;
+}

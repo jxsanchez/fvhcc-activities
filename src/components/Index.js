@@ -5,6 +5,7 @@ import Nav from './Nav';
 import Section from './Section';
 import GameInfo from './GameInfo';
 import Button from './Button';
+import Footer from './Footer';
 
 class Index extends React.Component {
     getLetters() {
@@ -15,6 +16,10 @@ class Index extends React.Component {
         }
 
         return letters;
+    }
+
+    componentDidMount() {
+        document.title = "Home | FVHCC Activities";
     }
 
     render() {
@@ -49,6 +54,7 @@ class Index extends React.Component {
                             <Link to='/' className='button button-outline-red disabled'>Coming Soon</Link>
                         </GameInfo>
                     </Section>
+                    <Footer />
                 </div>
         );
     }

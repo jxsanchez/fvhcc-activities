@@ -15,10 +15,30 @@
   .section-subtitle {
     color: $primaryRed;
     font-size: 2.5rem;
+    text-align: center;
   }
 
   .button {
     font-size: 1.2rem;
     margin-top: 15px;
+  }
+
+  @include media("<=phone") {
+    height: 50vh;
+    background-position-x: center;
+
+    .section-title {
+      font-size: 2.7rem;
+      letter-spacing: 10px;
+    }
+
+    .section-subtitle {
+      font-size: 1.5rem;
+    }
+
+    .button {
+      font-size: 1.2rem;
+      margin-top: 15px;
+    }
   }
 }

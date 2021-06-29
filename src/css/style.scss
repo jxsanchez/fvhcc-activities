@@ -1,3 +1,4 @@
+@import "./breakpoints/breakpoints.scss";
 @import url("https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
 
@@ -9,6 +10,7 @@
 @import "./_landing";
 @import "./_gameinfo";
 @import "./_mysteryword";
+@import "./_footer";
 
 * {
   box-sizing: border-box;

@@ -10,4 +10,29 @@
     font-size: 1.2rem;
     margin-bottom: 20px;
   }
+
+  @include media("<=phone") {
+    .game-title {
+      font-size: 1.7rem;
+      margin-bottom: 10px;
+    }
+
+    .game-description {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  @include media("<=phone", "landscape") {
+    .game-title {
+      font-size: 1.7rem;
+      color: orange;
+      margin-bottom: 10px;
+    }
+
+    .game-description {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+  }
 }

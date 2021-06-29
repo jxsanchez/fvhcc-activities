@@ -101,4 +101,143 @@
       margin: 0 15px;
     }
   }
+
+  @include media("<=phone") {
+    height: 100vh;
+    padding: 0;
+
+    .game-info-container {
+      .game-title {
+        @include uppercaseTitle(10px);
+        font-size: 2.3rem;
+        text-align: center;
+      }
+
+      .category {
+        font-size: 1.3rem;
+      }
+
+      .guesses-left {
+        font-size: 1.1rem;
+
+        .guess-num {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .mystery-word-container {
+      @include flexCenter(row);
+      height: 27%;
+
+      .letter {
+        font-size: 1rem;
+        margin: 0 20px;
+      }
+    }
+
+    .results-area {
+      height: 43%;
+
+      .results-title {
+        @include uppercaseTitle(5px);
+        font-size: 2.5rem;
+      }
+
+      .results-message {
+        font-size: 1.7rem;
+        margin: 25px 0;
+      }
+    }
+
+    .letter-area {
+      padding: 0;
+
+      .letters-container {
+        margin-bottom: 15px;
+
+        .letter-btn {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .options {
+      .button {
+        margin: 0 15px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  @include media(">=tablet") {
+    height: 100vh;
+    padding: 0;
+
+    .game-info-container {
+      .game-title {
+        @include uppercaseTitle(10px);
+        font-size: 3.4rem;
+      }
+
+      .category {
+        font-size: 1.7rem;
+      }
+
+      .guesses-left {
+        font-size: 1.5rem;
+
+        .guess-num {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .mystery-word-container {
+      @include flexCenter(row);
+      height: 27%;
+
+      .letter {
+        font-size: 3rem;
+        margin: 0 20px;
+      }
+    }
+
+    .results-area {
+      height: 43%;
+
+      .results-title {
+        @include uppercaseTitle(5px);
+        font-size: 2.5rem;
+      }
+
+      .results-message {
+        font-size: 1.7rem;
+        margin: 25px 0;
+      }
+    }
+
+    .letter-area {
+      padding: 0 1%;
+
+      .letters-container {
+        margin-bottom: 15px;
+
+        .letter-btn {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    .letter-btn {
+      background: none;
+      color: black;
+    }
+
+    .options {
+      .button {
+        margin: 0 15px;
+      }
+    }
+  }
 }
