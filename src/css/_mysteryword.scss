@@ -58,11 +58,13 @@
     .results-title {
       @include uppercaseTitle(5px);
       font-size: 2.5rem;
+      text-align: center;
     }
 
     .results-message {
       font-size: 1.7rem;
       margin: 25px 0;
+      text-align: center;
     }
   }
 
@@ -141,11 +143,11 @@
 
       .results-title {
         @include uppercaseTitle(5px);
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
 
       .results-message {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         margin: 25px 0;
       }
     }

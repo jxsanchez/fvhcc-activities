@@ -346,11 +346,13 @@
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 2.5rem;
+  text-align: center;
 }
 
 #mysteryword .results-area .results-message {
   font-size: 1.7rem;
   margin: 25px 0;
+  text-align: center;
 }
 
 #mysteryword .letter-area {
@@ -461,10 +463,10 @@
   #mysteryword .results-area .results-title {
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   #mysteryword .results-area .results-message {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin: 25px 0;
   }
   #mysteryword .letter-area {
