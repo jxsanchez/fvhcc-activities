@@ -6,27 +6,7 @@ import Button from './Button';
 import LetterArea from './LetterArea';
 import ResultsArea from './ResultsArea';
 
-const words = [
-    { 
-        category: 'FLOWERS',
-        list: ['TULIP', 'VIOLET', 'ROSE', 'DANDELION', 'HYDRANGEA', 
-            'HONEYSUCKLE', 'LILAC', 'DAISY', 'BLUEBELL', 'IRIS', 'AMARYLLIS', 'ASTER', 'BELLFLOWER',
-            'BUTTERCUP', 'CARNATION', 'LILY', 'CHRYSANTHEMUM', 'CLOVER', 'COSMOS', 'GARDENIA',
-            'GERMANIUM', 'GOLDENROD']
-    },
-    {
-        category: 'ANIMALS',
-        list: [
-            'CAT', 'DOG', 'PARROT'
-        ]
-    },
-    {
-        category: 'FRUIT',
-        list: [
-            'APPLE', 'BANANA', 'ORANGE', 'KIWI', 'BLUEBERRY'
-        ]
-    }
-];
+import words from '../assets/words';
 
 const hiddenCharacter = '_';
 const totalGuesses = 10;
