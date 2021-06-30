@@ -131,6 +131,7 @@
 
     .mystery-word-container {
       @include flexCenter(row);
+      flex-wrap: wrap;
       height: 27%;
 
       .letter {
