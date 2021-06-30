@@ -124,6 +124,23 @@
   }
 }
 
+@media (max-width: 926px) and (orientation: landscape) {
+  .nav {
+    height: 20vh;
+    padding: 0 30px;
+  }
+  .nav .nav-brand {
+    height: 90%;
+  }
+  .nav .link-container {
+    margin-left: 35px;
+  }
+  .nav .link-container .nav-link {
+    font-size: 1.2rem;
+    margin-right: 30px;
+  }
+}
+
 .section {
   height: 100vh;
   padding: 50px 100px;
@@ -145,15 +162,31 @@
 
 @media (max-width: 425px) {
   .section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     padding: 40px 20px;
   }
   .section .section-title {
     font-size: 2.2rem;
   }
   .section .section-subtitle {
-    color: #525458;
     font-size: 1.3rem;
-    letter-spacing: 5px;
+  }
+}
+
+@media (max-width: 926px) and (orientation: landscape) {
+  .section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 50px;
+  }
+  .section .section-title {
+    font-size: 2.7rem;
+  }
+  .section .section-subtitle {
+    font-size: 1.6rem;
   }
 }
 
@@ -214,6 +247,23 @@
   }
 }
 
+@media (max-width: 926px) and (orientation: landscape) {
+  #landing {
+    height: 80vh;
+    background-position-x: center;
+  }
+  #landing .section-title {
+    font-size: 3rem;
+  }
+  #landing .section-subtitle {
+    font-size: 1.7rem;
+  }
+  #landing .button {
+    font-size: 1.3rem;
+    margin-top: 15px;
+  }
+}
+
 .game-info .game-title {
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -238,14 +288,12 @@
   }
 }
 
-@media (max-width: 425px) and (orientation: landscape) {
+@media (max-width: 926px) and (orientation: landscape) {
   .game-info .game-title {
-    font-size: 1.7rem;
-    color: orange;
-    margin-bottom: 10px;
+    font-size: 2.2rem;
   }
   .game-info .game-description {
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-bottom: 20px;
   }
 }
@@ -266,6 +314,7 @@
           justify-content: center;
   height: 100vh;
   padding: 0;
+  /***** PHONE STYLES *****/
 }
 
 #mysteryword .game-info-container {
@@ -295,6 +344,7 @@
   text-transform: uppercase;
   letter-spacing: 10px;
   font-size: 4.3rem;
+  text-align: center;
 }
 
 #mysteryword .game-info-container .category {
@@ -442,10 +492,7 @@
     padding: 0;
   }
   #mysteryword .game-info-container .game-title {
-    text-transform: uppercase;
-    letter-spacing: 10px;
     font-size: 2.3rem;
-    text-align: center;
   }
   #mysteryword .game-info-container .category {
     font-size: 1.3rem;
@@ -505,7 +552,60 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 926px) and (orientation: landscape) {
+  #mysteryword {
+    height: 100vh;
+    padding: 0;
+  }
+  #mysteryword .game-info-container {
+    height: 50%;
+  }
+  #mysteryword .game-info-container .game-title {
+    font-size: 2.1rem;
+  }
+  #mysteryword .game-info-container .category {
+    font-size: 1.3rem;
+  }
+  #mysteryword .game-info-container .guesses-left {
+    font-size: 1.3rem;
+  }
+  #mysteryword .game-info-container .guesses-left .guess-num {
+    font-size: 1.7rem;
+  }
+  #mysteryword .mystery-word-container .letter {
+    font-size: 1.7rem;
+    margin: 0 20px;
+  }
+  #mysteryword .results-area {
+    height: 43%;
+  }
+  #mysteryword .results-area .results-title {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.7rem;
+  }
+  #mysteryword .results-area .results-message {
+    font-size: 1.3rem;
+    margin: 25px 0;
+  }
+  #mysteryword .letter-area {
+    padding: 0 50px;
+  }
+  #mysteryword .letter-area .letters-container {
+    margin-bottom: 5px;
+  }
+  #mysteryword .letter-area .letters-container .letter-btn {
+    padding: 5px 15px;
+    font-size: 1.3rem;
+  }
+  #mysteryword .options .button {
+    font-size: 1rem;
+    margin: 0 15px;
+    padding: 10px 20px;
+  }
+}
+
+@media (min-width: 1024px) {
   #mysteryword {
     height: 100vh;
     padding: 0;
@@ -591,6 +691,13 @@
   background: #00255c;
   color: #f8f8ff;
   height: 10vh;
+}
+
+@media (max-width: 926px) and (orientation: landscape) {
+  .footer {
+    height: 20vh;
+    font-size: 1.3rem;
+  }
 }
 
 * {

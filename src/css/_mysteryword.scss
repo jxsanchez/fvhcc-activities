@@ -16,6 +16,7 @@
     .game-title {
       @include uppercaseTitle(10px);
       font-size: 4.3rem;
+      text-align: center;
     }
 
     .category {
@@ -105,15 +106,14 @@
     }
   }
 
+  /***** PHONE STYLES *****/
   @include media("<=phone") {
     height: 100vh;
     padding: 0;
 
     .game-info-container {
       .game-title {
-        @include uppercaseTitle(10px);
         font-size: 2.3rem;
-        text-align: center;
       }
 
       .category {
@@ -170,6 +170,72 @@
       .button {
         margin: 0 15px;
         font-size: 1.2rem;
+      }
+    }
+  }
+
+  @include media("<=phoneLandscape", "landscape") {
+    height: 100vh;
+    padding: 0;
+
+    .game-info-container {
+      height: 50%;
+      .game-title {
+        font-size: 2.1rem;
+      }
+
+      .category {
+        font-size: 1.3rem;
+      }
+
+      .guesses-left {
+        font-size: 1.3rem;
+
+        .guess-num {
+          font-size: 1.7rem;
+        }
+      }
+    }
+
+    .mystery-word-container {
+      .letter {
+        font-size: 1.7rem;
+        margin: 0 20px;
+      }
+    }
+
+    .results-area {
+      height: 43%;
+
+      .results-title {
+        @include uppercaseTitle(5px);
+        font-size: 1.7rem;
+      }
+
+      .results-message {
+        font-size: 1.3rem;
+        margin: 25px 0;
+      }
+    }
+
+    .letter-area {
+      padding: 0 50px;
+
+      .letters-container {
+        margin-bottom: 5px;
+
+        .letter-btn {
+          padding: 5px 15px;
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .options {
+      .button {
+        font-size: 1rem;
+        margin: 0 15px;
+        padding: 10px 20px;
       }
     }
   }

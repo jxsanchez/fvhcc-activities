@@ -41,4 +41,22 @@
       margin-top: 15px;
     }
   }
+
+  @include media("<=phoneLandscape", "landscape") {
+    height: 80vh;
+    background-position-x: center;
+
+    .section-title {
+      font-size: 3rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.7rem;
+    }
+
+    .button {
+      font-size: 1.3rem;
+      margin-top: 15px;
+    }
+  }
 }

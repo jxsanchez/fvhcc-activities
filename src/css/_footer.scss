@@ -3,4 +3,9 @@
   background: $primaryBlue;
   color: $white;
   height: 10vh;
+
+  @include media("<=phoneLandscape", "landscape") {
+    height: 20vh;
+    font-size: 1.3rem;
+  }
 }
