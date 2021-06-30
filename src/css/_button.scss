@@ -13,6 +13,10 @@
     background: $primaryBlue;
     cursor: pointer;
   }
+
+  @include media("<=phone") {
+    padding: 10px 20px;
+  }
 }
 
 .button-outline-red {

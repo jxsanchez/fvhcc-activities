@@ -18,6 +18,12 @@
   cursor: pointer;
 }
 
+@media (max-width: 425px) {
+  .button {
+    padding: 10px 20px;
+  }
+}
+
 .button-outline-red {
   background: none;
   border: 3px solid #e8041f;
@@ -245,6 +251,19 @@
 }
 
 #mysteryword {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100vh;
   padding: 0;
 }
@@ -454,7 +473,7 @@
     height: 27%;
   }
   #mysteryword .mystery-word-container .letter {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin: 0 20px;
   }
   #mysteryword .results-area {
@@ -463,10 +482,10 @@
   #mysteryword .results-area .results-title {
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   #mysteryword .results-area .results-message {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 25px 0;
   }
   #mysteryword .letter-area {

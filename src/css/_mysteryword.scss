@@ -1,4 +1,5 @@
 #mysteryword {
+  @include flexCenter(column);
   height: 100vh;
   padding: 0;
 
@@ -133,7 +134,7 @@
       height: 27%;
 
       .letter {
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin: 0 20px;
       }
     }
@@ -143,11 +144,11 @@
 
       .results-title {
         @include uppercaseTitle(5px);
-        font-size: 2rem;
+        font-size: 1.7rem;
       }
 
       .results-message {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin: 25px 0;
       }
     }
