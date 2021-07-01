@@ -49,7 +49,7 @@ class Index extends React.Component {
 
                         <GameInfo 
                             title='Higher or Lower'
-                            description='Guess whether the next number is higher or lower than the current number!'
+                            description='Aim for the highest score you can by guessing whether the next number is higher or lower than the current number!'
                         >
                             <Link to='/higherorlower' className='button button-outline-red'>Play</Link>
                         </GameInfo>
