@@ -34,7 +34,7 @@
       margin-bottom: 15px;
     }
 
-    span {
+    .or-span {
       font-size: 1.7rem;
     }
 
@@ -44,12 +44,107 @@
       margin: 0 15px;
     }
 
+    .button-outline-red {
+      border: 3px solid $primaryRed !important;
+    }
+
+    .button-outline-blue {
+      border: 3px solid $primaryBlue !important;
+    }
+
     .button.higher {
       background: #084ea6;
     }
 
     .button.lower {
       background: #a61f11;
+    }
+  }
+
+  @include media("<=phone") {
+    .game-info-container {
+      height: 35%;
+
+      .num-range {
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+
+      .score-container {
+        font-size: 1.8rem;
+      }
+    }
+
+    .game-area {
+      height: 30%;
+      .current-num {
+        font-size: 7.5rem;
+      }
+    }
+
+    .option-area {
+      height: 35%;
+
+      .message {
+        font-size: 1.7rem;
+        margin-bottom: 15px;
+      }
+
+      .or-span {
+        font-size: 1.9rem;
+      }
+
+      .button {
+        padding: 20px;
+      }
+    }
+  }
+
+  @include media("<=phoneLandscape") {
+    .game-info-container {
+      height: 45%;
+
+      .num-range {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+
+      .score-container {
+        font-size: 1.7rem;
+      }
+    }
+
+    .game-area {
+      height: 20%;
+      .current-num {
+        font-size: 4rem;
+      }
+    }
+
+    .option-area {
+      height: 35%;
+      justify-content: center;
+
+      .message {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+      }
+
+      .or-span {
+        font-size: 1.5rem;
+      }
+
+      .button {
+        padding: 15px 10px;
+      }
+    }
+
+    .button-outline-red {
+      border: 3px solid $primaryRed;
+    }
+
+    .button-outline-blue {
+      border: 3px solid $primaryBlue;
     }
   }
 }

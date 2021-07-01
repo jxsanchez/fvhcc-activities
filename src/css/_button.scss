@@ -20,29 +20,9 @@
 }
 
 .button-outline-red {
-  background: none;
-  border: 3px solid $primaryRed;
-  color: $primaryRed;
-  font-weight: bold;
-  transition: $transition;
-
-  &:hover {
-    background: $primaryRed;
-    border: 3px solid $primaryRed;
-    color: $white;
-  }
+  @include btnWithBorder($primaryRed);
 }
 
 .button-outline-blue {
-  background: none;
-  border: 3px solid $primaryBlue;
-  color: $primaryBlue;
-  font-weight: bold;
-  transition: $transition;
-
-  &:hover {
-    background: $primaryBlue;
-    border: 3px solid $primaryBlue;
-    color: $white;
-  }
+  @include btnWithBorder($primaryBlue);
 }

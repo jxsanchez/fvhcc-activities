@@ -35,7 +35,6 @@
 
 .button-outline-red:hover {
   background: #e8041f;
-  border: 3px solid #e8041f;
   color: #f8f8ff;
 }
 
@@ -50,7 +49,6 @@
 
 .button-outline-blue:hover {
   background: #00255c;
-  border: 3px solid #00255c;
   color: #f8f8ff;
 }
 
@@ -721,7 +719,7 @@
   margin-bottom: 15px;
 }
 
-#higherorlower .option-area span {
+#higherorlower .option-area .or-span {
   font-size: 1.7rem;
 }
 
@@ -731,12 +729,93 @@
   margin: 0 15px;
 }
 
+#higherorlower .option-area .button-outline-red {
+  border: 3px solid #e8041f !important;
+}
+
+#higherorlower .option-area .button-outline-blue {
+  border: 3px solid #00255c !important;
+}
+
 #higherorlower .option-area .button.higher {
   background: #084ea6;
 }
 
 #higherorlower .option-area .button.lower {
   background: #a61f11;
+}
+
+@media (max-width: 425px) {
+  #higherorlower .game-info-container {
+    height: 35%;
+  }
+  #higherorlower .game-info-container .num-range {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  #higherorlower .game-info-container .score-container {
+    font-size: 1.8rem;
+  }
+  #higherorlower .game-area {
+    height: 30%;
+  }
+  #higherorlower .game-area .current-num {
+    font-size: 7.5rem;
+  }
+  #higherorlower .option-area {
+    height: 35%;
+  }
+  #higherorlower .option-area .message {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+  }
+  #higherorlower .option-area .or-span {
+    font-size: 1.9rem;
+  }
+  #higherorlower .option-area .button {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 926px) {
+  #higherorlower .game-info-container {
+    height: 45%;
+  }
+  #higherorlower .game-info-container .num-range {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  #higherorlower .game-info-container .score-container {
+    font-size: 1.7rem;
+  }
+  #higherorlower .game-area {
+    height: 20%;
+  }
+  #higherorlower .game-area .current-num {
+    font-size: 4rem;
+  }
+  #higherorlower .option-area {
+    height: 35%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #higherorlower .option-area .message {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+  #higherorlower .option-area .or-span {
+    font-size: 1.5rem;
+  }
+  #higherorlower .option-area .button {
+    padding: 15px 10px;
+  }
+  #higherorlower .button-outline-red {
+    border: 3px solid #e8041f;
+  }
+  #higherorlower .button-outline-blue {
+    border: 3px solid #00255c;
+  }
 }
 
 .footer {
