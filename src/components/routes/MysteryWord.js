@@ -2,11 +2,13 @@ import React from 'react';
 import anime from 'animejs/lib/anime.es';
 import { Link } from 'react-router-dom';
 
-import Button from './Button';
-import LetterArea from './LetterArea';
-import ResultsArea from './ResultsArea';
+import Button from '../Button';
+import GameHeader from '../GameHeader';
+import GameArea from '../GameArea';
+import LetterArea from '../LetterArea';
+import ResultsArea from '../ResultsArea';
 
-import words from '../assets/words';
+import words from '../../assets/words';
 
 const hiddenCharacter = '_';
 const totalGuesses = 10;
@@ -78,8 +80,7 @@ class MysteryWord extends React.Component {
     render() {
         return (
             <div id='mysteryword' className='section'>
-                <div className='game-info-container'>
-                    <h1 className='game-title'>Mystery Word</h1>
+                <GameHeader title='Mystery Word'>
                     <h2 className='category'>Category: <span className='category-name'>{category}</span></h2>
                     <p className='guesses-left'>
                         Guesses Left:
@@ -89,12 +90,14 @@ class MysteryWord extends React.Component {
                             { this.state.guessesLeft }
                         </span>
                     </p>
-                </div>
-                <div className='mystery-word-container'>
+                </GameHeader>
+
+                <GameArea>
                     {this.state.displayWord.map((letter, index) => {
-                       return <div key={index} className='letter'>{letter}</div>;
-                    })}
-                </div>
+                        return <div key={index} className='letter'>{letter}</div>;
+                        })}
+                </GameArea>
+                
                 {this.state.guessesLeft > 0 && this.state.displayWord.indexOf(hiddenCharacter) !== -1 ? 
                             <LetterArea handleLetterClicked={this.handleLetterClicked}>
                                 <div className='options'>

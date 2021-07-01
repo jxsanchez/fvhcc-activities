@@ -264,7 +264,13 @@
   }
 }
 
-.game-info .game-title {
+#games {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#games .game-info .game-title {
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #00255c;
@@ -272,30 +278,115 @@
   margin-bottom: 10px;
 }
 
-.game-info .game-description {
+#games .game-info .game-description {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
 
 @media (max-width: 425px) {
-  .game-info .game-title {
+  #games .game-info .game-title {
     font-size: 1.7rem;
     margin-bottom: 10px;
   }
-  .game-info .game-description {
+  #games .game-info .game-description {
     font-size: 1rem;
     margin-bottom: 20px;
   }
 }
 
 @media (max-width: 926px) and (orientation: landscape) {
-  .game-info .game-title {
+  #games .game-info .game-title {
     font-size: 2.2rem;
   }
-  .game-info .game-description {
+  #games .game-info .game-description {
     font-size: 1.3rem;
     margin-bottom: 20px;
   }
+}
+
+.game-info-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  color: #f8f8ff;
+  height: 30%;
+  width: 100%;
+}
+
+.game-info-container .game-title {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 4.3rem;
+  text-align: center;
+}
+
+@media (max-width: 425px) {
+  .game-info-container .game-title {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 926px) and (orientation: landscape) {
+  .game-info-container {
+    height: 50%;
+  }
+  .game-info-container .game-title {
+    font-size: 2.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .game-info-container .game-title {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 3.4rem;
+  }
+}
+
+.game-area {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 27%;
+}
+
+.option-area {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 43%;
 }
 
 #mysteryword {
@@ -318,33 +409,8 @@
 }
 
 #mysteryword .game-info-container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background: #e8041f;
   border-bottom: solid 7px #00255c;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  color: #f8f8ff;
-  height: 30%;
-  width: 100%;
-}
-
-#mysteryword .game-info-container .game-title {
-  text-transform: uppercase;
-  letter-spacing: 10px;
-  font-size: 4.3rem;
-  text-align: center;
 }
 
 #mysteryword .game-info-container .category {
@@ -370,24 +436,7 @@
   margin-left: 10px;
 }
 
-#mysteryword .mystery-word-container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 27%;
-}
-
-#mysteryword .mystery-word-container .letter {
+#mysteryword .game-area .letter {
   font-size: 4rem;
   margin: 0 25px;
 }
@@ -438,6 +487,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   height: 43%;
   padding: 0 7%;
   text-align: center;
@@ -453,7 +505,7 @@
 #mysteryword .letter-area .letters-container .letter-btn {
   border: none;
   font-size: 3rem;
-  margin: 0;
+  margin-bottom: 20px;
 }
 
 #mysteryword .letter-area .letters-container .letter-btn:hover {
@@ -491,9 +543,6 @@
     height: 100vh;
     padding: 0;
   }
-  #mysteryword .game-info-container .game-title {
-    font-size: 2.3rem;
-  }
   #mysteryword .game-info-container .category {
     font-size: 1.3rem;
   }
@@ -503,25 +552,11 @@
   #mysteryword .game-info-container .guesses-left .guess-num {
     font-size: 1.5rem;
   }
-  #mysteryword .mystery-word-container {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  #mysteryword .game-area {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    height: 27%;
   }
-  #mysteryword .mystery-word-container .letter {
+  #mysteryword .game-area .letter {
     font-size: 0.8rem;
     margin: 0 20px;
   }
@@ -557,12 +592,6 @@
     height: 100vh;
     padding: 0;
   }
-  #mysteryword .game-info-container {
-    height: 50%;
-  }
-  #mysteryword .game-info-container .game-title {
-    font-size: 2.1rem;
-  }
   #mysteryword .game-info-container .category {
     font-size: 1.3rem;
   }
@@ -572,7 +601,7 @@
   #mysteryword .game-info-container .guesses-left .guess-num {
     font-size: 1.7rem;
   }
-  #mysteryword .mystery-word-container .letter {
+  #mysteryword .game-area .letter {
     font-size: 1.7rem;
     margin: 0 20px;
   }
@@ -580,8 +609,6 @@
     height: 43%;
   }
   #mysteryword .results-area .results-title {
-    text-transform: uppercase;
-    letter-spacing: 5px;
     font-size: 1.7rem;
   }
   #mysteryword .results-area .results-message {
@@ -610,11 +637,6 @@
     height: 100vh;
     padding: 0;
   }
-  #mysteryword .game-info-container .game-title {
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    font-size: 3.4rem;
-  }
   #mysteryword .game-info-container .category {
     font-size: 1.7rem;
   }
@@ -624,23 +646,7 @@
   #mysteryword .game-info-container .guesses-left .guess-num {
     font-size: 2rem;
   }
-  #mysteryword .mystery-word-container {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 27%;
-  }
-  #mysteryword .mystery-word-container .letter {
+  #mysteryword .game-area .letter {
     font-size: 3rem;
     margin: 0 20px;
   }
@@ -672,6 +678,65 @@
   #mysteryword .options .button {
     margin: 0 15px;
   }
+}
+
+#higherorlower {
+  height: 100vh;
+  padding: 0;
+}
+
+#higherorlower .game-info-container {
+  background: #00a1a6;
+  border-bottom: solid 7px #3c1e03;
+  height: 40%;
+}
+
+#higherorlower .game-info-container .num-range {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+#higherorlower .game-info-container .score-container {
+  font-size: 2rem;
+}
+
+#higherorlower .game-area {
+  height: 30%;
+}
+
+#higherorlower .game-area .current-num {
+  font-size: 7rem;
+}
+
+#higherorlower .option-area {
+  height: 30%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: center;
+}
+
+#higherorlower .option-area .message {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#higherorlower .option-area span {
+  font-size: 1.7rem;
+}
+
+#higherorlower .option-area .button {
+  font-size: 1rem;
+  border: none;
+  margin: 0 15px;
+}
+
+#higherorlower .option-area .button.higher {
+  background: #084ea6;
+}
+
+#higherorlower .option-area .button.lower {
+  background: #a61f11;
 }
 
 .footer {
@@ -727,6 +792,10 @@ a {
 .divider {
   margin: 25px 0;
   width: 100%;
+}
+
+.big-num {
+  font-size: 2.5rem !important;
 }
 
 .disabled {

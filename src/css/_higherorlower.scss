@@ -1,0 +1,55 @@
+#higherorlower {
+  height: 100vh;
+  padding: 0;
+
+  .game-info-container {
+    background: #00a1a6;
+    border-bottom: solid 7px #3c1e03;
+    height: 40%;
+
+    .num-range {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .score-container {
+      font-size: 2rem;
+    }
+  }
+
+  .game-area {
+    height: 30%;
+    .current-num {
+      font-size: 7rem;
+    }
+  }
+
+  .option-area {
+    height: 30%;
+    justify-content: flex-start;
+    text-align: center;
+
+    .message {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    span {
+      font-size: 1.7rem;
+    }
+
+    .button {
+      font-size: 1rem;
+      border: none;
+      margin: 0 15px;
+    }
+
+    .button.higher {
+      background: #084ea6;
+    }
+
+    .button.lower {
+      background: #a61f11;
+    }
+  }
+}

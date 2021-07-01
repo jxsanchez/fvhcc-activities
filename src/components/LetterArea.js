@@ -22,7 +22,6 @@ const LetterArea = (props) => {
                     return <button className="button letter-btn" key={letter} onClick={event => { onLetterClicked(event)}}>{letter}</button>
                 })}
             </div>
-            
 
             {props.children}
         </div>

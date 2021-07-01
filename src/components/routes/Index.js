@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Nav from './Nav';
-import Section from './Section';
-import GameInfo from './GameInfo';
-import Button from './Button';
-import Footer from './Footer';
+import Nav from '../Nav';
+import Section from '../Section';
+import GameInfo from '../GameInfo';
+import Button from '../Button';
+import Footer from '../Footer';
 
 class Index extends React.Component {
     getLetters() {
@@ -45,6 +45,13 @@ class Index extends React.Component {
                             description='Guess the mystery word before you run out of guesses!'
                         >
                             <Link to='/mysteryword' className='button button-outline-red'>Play</Link>
+                        </GameInfo>
+
+                        <GameInfo 
+                            title='Higher or Lower'
+                            description='Guess whether the next number is higher or lower than the current number!'
+                        >
+                            <Link to='/higherorlower' className='button button-outline-red'>Play</Link>
                         </GameInfo>
 
                         <GameInfo 

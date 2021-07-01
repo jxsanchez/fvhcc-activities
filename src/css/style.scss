@@ -9,7 +9,11 @@
 @import "./_section";
 @import "./_landing";
 @import "./_gameinfo";
+@import "./_gameheader";
+@import "./_gamearea";
+@import "./_optionarea";
 @import "./_mysteryword";
+@import "./_higherorlower";
 @import "./_footer";
 
 * {
@@ -38,6 +42,10 @@ a {
 .divider {
   margin: 25px 0;
   width: 100%;
+}
+
+.big-num {
+  font-size: 2.5rem !important;
 }
 
 .disabled {

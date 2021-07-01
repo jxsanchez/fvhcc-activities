@@ -4,20 +4,8 @@
   padding: 0;
 
   .game-info-container {
-    @include flexCenter(column);
     background: $primaryRed;
     border-bottom: solid 7px $primaryBlue;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    color: $white;
-    height: 30%;
-    width: 100%;
-
-    .game-title {
-      @include uppercaseTitle(10px);
-      font-size: 4.3rem;
-      text-align: center;
-    }
 
     .category {
       font-size: 2rem;
@@ -42,10 +30,7 @@
     }
   }
 
-  .mystery-word-container {
-    @include flexCenter(row);
-    height: 27%;
-
+  .game-area {
     .letter {
       font-size: 4rem;
       margin: 0 25px;
@@ -72,6 +57,7 @@
 
   .letter-area {
     @include flexCenter(column);
+    justify-content: flex-start;
     height: 43%;
     padding: 0 7%;
     text-align: center;
@@ -83,7 +69,7 @@
       .letter-btn {
         border: none;
         font-size: 3rem;
-        margin: 0;
+        margin-bottom: 20px;
 
         &:hover {
           color: $primaryRed;
@@ -112,10 +98,6 @@
     padding: 0;
 
     .game-info-container {
-      .game-title {
-        font-size: 2.3rem;
-      }
-
       .category {
         font-size: 1.3rem;
       }
@@ -129,10 +111,8 @@
       }
     }
 
-    .mystery-word-container {
-      @include flexCenter(row);
+    .game-area {
       flex-wrap: wrap;
-      height: 27%;
 
       .letter {
         font-size: 0.8rem;
@@ -179,11 +159,6 @@
     padding: 0;
 
     .game-info-container {
-      height: 50%;
-      .game-title {
-        font-size: 2.1rem;
-      }
-
       .category {
         font-size: 1.3rem;
       }
@@ -197,7 +172,7 @@
       }
     }
 
-    .mystery-word-container {
+    .game-area {
       .letter {
         font-size: 1.7rem;
         margin: 0 20px;
@@ -208,7 +183,6 @@
       height: 43%;
 
       .results-title {
-        @include uppercaseTitle(5px);
         font-size: 1.7rem;
       }
 
@@ -245,11 +219,6 @@
     padding: 0;
 
     .game-info-container {
-      .game-title {
-        @include uppercaseTitle(10px);
-        font-size: 3.4rem;
-      }
-
       .category {
         font-size: 1.7rem;
       }
@@ -263,10 +232,7 @@
       }
     }
 
-    .mystery-word-container {
-      @include flexCenter(row);
-      height: 27%;
-
+    .game-area {
       .letter {
         font-size: 3rem;
         margin: 0 20px;

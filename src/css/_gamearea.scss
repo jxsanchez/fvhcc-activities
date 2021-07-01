@@ -1,0 +1,7 @@
+.game-area {
+  @include flexCenter(row);
+  height: 27%;
+
+  @include media("<=phone") {
+  }
+}

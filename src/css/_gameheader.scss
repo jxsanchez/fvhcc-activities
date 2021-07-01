@@ -1,0 +1,35 @@
+.game-info-container {
+  @include flexCenter(column);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  color: $white;
+  height: 30%;
+  width: 100%;
+
+  .game-title {
+    @include uppercaseTitle(10px);
+    font-size: 4.3rem;
+    text-align: center;
+  }
+
+  @include media("<=phone") {
+    .game-title {
+      font-size: 2.3rem;
+    }
+  }
+
+  @include media("<=phoneLandscape", "landscape") {
+    height: 50%;
+
+    .game-title {
+      font-size: 2.1rem;
+    }
+  }
+
+  @include media(">=tablet") {
+    .game-title {
+      @include uppercaseTitle(10px);
+      font-size: 3.4rem;
+    }
+  }
+}
