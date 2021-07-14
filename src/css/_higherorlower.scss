@@ -45,11 +45,11 @@
     }
 
     .button-outline-red {
-      border: 3px solid $primaryRed !important;
+      border: 3px solid $primaryColor !important;
     }
 
     .button-outline-blue {
-      border: 3px solid $primaryBlue !important;
+      border: 3px solid $secondaryColor !important;
     }
 
     .button.higher {
@@ -140,11 +140,11 @@
     }
 
     .button-outline-red {
-      border: 3px solid $primaryRed;
+      border: 3px solid $primaryColor;
     }
 
     .button-outline-blue {
-      border: 3px solid $primaryBlue;
+      border: 3px solid $secondaryColor;
     }
   }
 }

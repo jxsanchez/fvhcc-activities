@@ -1,9 +1,10 @@
 .section {
   height: 100vh;
   padding: 50px 100px;
+  background: $white;
 
   .section-title {
-    color: $primaryBlue;
+    color: $secondaryColor;
     font-size: 3.2rem;
     @include uppercaseTitle(5px);
     text-transform: uppercase;

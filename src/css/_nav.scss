@@ -1,8 +1,9 @@
 .nav {
   align-items: center;
   display: flex;
-  height: 20vh;
+  height: 15vh;
   padding: 0 50px;
+  background: $primaryColor;
 
   .nav-brand {
     height: 70%;
@@ -19,14 +20,14 @@
 
     .nav-link {
       @include uppercaseTitle(5px);
-      color: $primaryBlue;
+      color: $white;
       font-size: 1.5rem;
       font-weight: bold;
       margin-right: 50px;
       transition: $transition;
 
       &:hover {
-        color: $primaryRed;
+        color: $secondaryColor;
       }
     }
   }

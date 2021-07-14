@@ -1,10 +1,11 @@
 #landing {
   @include flexCenter(column);
-  height: 80vh;
+  height: 85vh;
   background: url("../assets/img/landing-bg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.6);
+  background-position-y: -100px;
+  box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.7);
 
   .section-title {
     font-size: 4.5rem;
@@ -13,7 +14,7 @@
   }
 
   .section-subtitle {
-    color: $primaryRed;
+    color: $primaryColor;
     font-size: 2.5rem;
     text-align: center;
   }
@@ -24,12 +25,14 @@
   }
 
   @include media("<=phone") {
+    background-position-y: 0px;
     height: 50vh;
+    padding: 0 10px;
     background-position-x: center;
 
     .section-title {
       font-size: 2.7rem;
-      letter-spacing: 10px;
+      letter-spacing: 5px;
     }
 
     .section-subtitle {
@@ -45,9 +48,10 @@
   @include media("<=phoneLandscape", "landscape") {
     height: 80vh;
     background-position-x: center;
+    padding: 0 20px;
 
     .section-title {
-      font-size: 3rem;
+      font-size: 2.9rem;
     }
 
     .section-subtitle {
@@ -57,6 +61,45 @@
     .button {
       font-size: 1.3rem;
       margin-top: 15px;
+    }
+  }
+
+  @include media(">=tablet", "portrait") {
+    background-position-y: 0;
+    padding: 0 30px;
+
+    .section-title {
+      font-size: 3.8rem;
+      letter-spacing: 10px;
+    }
+
+    .section-subtitle {
+      font-size: 2.4rem;
+      margin: 15px 0;
+    }
+
+    .button {
+      font-size: 1.7rem;
+    }
+  }
+
+  @include media(">=tabletLandscape", "landscape") {
+    background-position-y: 0px;
+    height: 85vh;
+    padding: 0;
+
+    .section-title {
+      font-size: 4rem;
+      letter-spacing: 10px;
+    }
+
+    .section-subtitle {
+      font-size: 2.5rem;
+      margin: 15px 0;
+    }
+
+    .button {
+      font-size: 1.9rem;
     }
   }
 }

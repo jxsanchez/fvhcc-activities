@@ -5,6 +5,7 @@
 @import "./_variables";
 @import "./_mixin";
 @import "./_button";
+@import "./_select";
 @import "./_nav";
 @import "./_section";
 @import "./_landing";
@@ -23,12 +24,16 @@
   padding: 0;
 }
 
+html {
+  background: $secondaryColor;
+}
+
 a {
   text-decoration: none;
 }
 
 .success {
-  color: darkgreen;
+  color: $successGreen;
 }
 
 .warning {
@@ -36,7 +41,7 @@ a {
 }
 
 .error {
-  color: $secondaryRed;
+  color: $errorRed;
 }
 
 .divider {

@@ -1,12 +1,6 @@
 import React from 'react';
 
 const LetterArea = (props) => {
-    const letters = [];
-
-    for(let i = 65; i <= 90; i++) {
-        letters.push(String.fromCharCode(i));
-    }
-
     const onLetterClicked = (event) => {
         // Hide letter after it is clicked
         event.target.style.display = 'none';
@@ -18,7 +12,7 @@ const LetterArea = (props) => {
     return (
         <div className='letter-area'>
             <div className='letters-container'>
-                {letters.map(letter => {
+                {props.letters.map(letter => {
                     return <button className="button letter-btn" key={letter} onClick={event => { onLetterClicked(event)}}>{letter}</button>
                 })}
             </div>

@@ -4,11 +4,12 @@
   padding: 0;
 
   .game-info-container {
-    background: $primaryRed;
-    border-bottom: solid 7px $primaryBlue;
+    background: $primaryColor;
+    border-bottom: solid 7px $secondaryColor;
 
     .category {
-      font-size: 2rem;
+      @include uppercaseTitle(1px);
+      font-size: 2.3rem;
       font-weight: normal;
       margin: 10px 0;
 
@@ -72,7 +73,7 @@
         margin-bottom: 20px;
 
         &:hover {
-          color: $primaryRed;
+          color: $primaryColor;
           cursor: pointer;
         }
       }

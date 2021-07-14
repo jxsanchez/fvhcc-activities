@@ -19,7 +19,7 @@ class Index extends React.Component {
     }
 
     componentDidMount() {
-        document.title = "Home | FVHCC Activities";
+        document.title = "Home | Senior Activity Games";
     }
 
     render() {
@@ -28,7 +28,7 @@ class Index extends React.Component {
                 <Nav />
                 <Section 
                         id='landing' 
-                        title='FVHCC Activities'
+                        title='Senior Activity Games'
                         subtitle='Games to stimulate the mind'
                     >
                         <Button href='#games' className='button' text='See Games' />

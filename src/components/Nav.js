@@ -4,7 +4,7 @@ const Nav = () => {
     return (
         <div className='nav'>
             <a className='nav-brand' href='/'>
-                <img className='brand-img' src='img/fv-logo.png'  alt='Freedom Village Logo'/>
+                {/* <img className='brand-img' src='img/fv-logo.png'  alt='Senior Activity Games Logo'/> */}
             </a>
             
             <ul className='link-container'>

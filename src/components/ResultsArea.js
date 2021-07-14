@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import Button from './Button';
 
 const ResultsArea = (props) => {
-    const playAgain = () => {
-        props.playAgain();
+    const playAgain = (e) => {
+        e.preventDefault();
+
+        props.onClick();
     }
 
     return (
@@ -14,7 +16,8 @@ const ResultsArea = (props) => {
             <p className='results-message'>{props.message}</p>
 
             <div className='options'>
-                <Button href='/mysteryword' className='button button-outline-blue' text='Play Again' onClick={playAgain} />
+                <a href='' className='button button-outline-blue' onClick={e => {playAgain(e)}}>Play Again</a>
+                {/* <Button className='button button-outline-blue' text='Play Again' onClick={playAgain} /> */}
                 <Link className='button' to='/'>Quit</Link>
             </div>
         </div>

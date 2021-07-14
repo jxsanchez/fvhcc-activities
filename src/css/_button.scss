@@ -1,5 +1,5 @@
 .button {
-  background: $primaryRed;
+  background: $primaryColor;
   border-radius: 5px;
   color: $white;
   display: inline-block;
@@ -10,7 +10,7 @@
   transition: $transition;
 
   &:hover {
-    background: $primaryBlue;
+    background: $secondaryColor;
     cursor: pointer;
   }
 
@@ -20,9 +20,9 @@
 }
 
 .button-outline-red {
-  @include btnWithBorder($primaryRed);
+  @include btnWithBorder($primaryColor);
 }
 
 .button-outline-blue {
-  @include btnWithBorder($primaryBlue);
+  @include btnWithBorder($secondaryColor);
 }
